@@ -12,6 +12,24 @@
         .subItems{
             list-style-type: lower-alpha;
         }
+        p { /*al usar el tag p, estoy aplicando lo que introduzca en las llaves a todos los elementos representados por ese tag*/
+
+            text-indent: 80px;  /* la propiedad tipografica text-indent: sirve para darle sangria al texto*/
+            letter-spacing: 2px;   /*esta linea y la siguiente producen efectos en el formato del texto*/
+            word-spacing: 10px;     /*especificamente el espaciado entre letras y palabras */
+            color: #af171d;
+        }
+        #p1{    /*esto limita lo que ocurra dentro de la llave al elemento que tiene el id particular p1*/
+            text-justify: auto;
+        }
+        #p2{
+            font-family: "AR BLANCA";
+            font-size: x-large;
+        }
+        #p3{
+            font-style: italic;
+            font-weight: bolder;
+        }
 
     </style>
 </head>
@@ -24,23 +42,24 @@
 
 <ol class="titulo">
     <li>Capítulo</li>
+    <p>hola</p>
 </ol>
 
 <h3>Principios Generales</h3>
-<p><span>Artículo 1º.-</span> La  presente  Ley  determina  la  política  ambiental  provincial  y,  en
+<p id="p1"><span>Artículo 1º.-</span> La  presente  Ley  determina  la  política  ambiental  provincial  y,  en
     ejercicio de las competencias establecidas en el artículo 41 de la
     Constitución  Nacional,  complementa  los  presupuestos  mínimos establecidos en la Ley Nacional Nº 25.675 -
     General del Ambiente-, para  la  gestión  sustentable  y  adecuada  del  ambiente, la  preservación  y
     protección  de  la  diversidad  biológica  y  la implementación  del  desarrollo  sustentable  que  promueva  una
     adecuada  convivencia  de  los  habitantes  con  su  entorno  en  el territorio de la Provincia de Córdoba.
 </p>
-<p>
+<p id="p2">
     <span>Artículo 2º.-</span> La  presente  Ley  es  de  orden  público  y  se  incorpora  al  marco
     normativo  ambiental  vigente  en  la  Provincia - Ley  Nº 7343, normas   concordantes   y   complementarias-,
     modernizando   y definiendo  los  principales  instrumentos  de  política  y  gestión
     ambiental  y  estableciendo  la  participación  ciudadana en  los distintos procesos de gestión.
 </p>
-<p>
+<p id="p3">
     <span>Artículo 3º.-</span> La política ambiental provincial establece el cumplimiento de los
     siguientes objetivos:
 
