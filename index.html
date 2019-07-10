@@ -1,24 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es" >
+<head >
     <meta charset="UTF-8">
     <title>Guía de Ejercicios y Contenidos</title>
     <style>
-        body{font-family: Calibri; align-self: center}
+        body{font-family: Calibri; align-self: center; background-color: #555555}
+
+        table {
+            background-color: #2daf1f;
+            border-collapse: separate;
+            /*border: solid black;*/
+
+        }
+
         table th {background-color: #b4c5ff; }
 
-        table tr:nth-child(odd) {background-color: #faf5ff;}
+        table td:nth-child(odd) {
+            border: dashed orange 3px;
+            padding: 10px ;
+        }
 
-        table tr:nth-child(even) {background-color: #dbeeff;}
+        table td:nth-child(even) {
+            border: dotted yellow 3px;
+            padding: 10px ;
+        }
 
-        caption {background: #af171d}   /*este tag es el que le otorga titulos a las tablas, forma un
+        table tr:nth-child(odd) {
+            background-color: #faf5ff;
+            border: dashed red 3px;
+            padding: 10px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #dbeeff;
+            border: dotted blue 3px;
+            padding: 10px;
+        }
+
+        /*caption {background: #af171d}   /*este tag es el que le otorga titulos a las tablas, forma un
                                          cuadro para la tabla y por defecto tiene fondo blanco y sin bordes*/
     </style>
 </head>
-<body>
+<body><!-- bgcolor="gray"-->
 <h1>Guía de Ejercicios y Contenidos</h1>
-<table>
-    <caption><h3>Guía de Ejercicios HTML</h3></caption>
+
+<table>  <!-- border="1"  bgcolor="#FF0000"--> <!--border es un atributo DEPRECADO, USAR *border, border-color, border-width and border-style*
+                                                EN LA HOJA DE CSS EN SU LUGAR
+                                                del tag <table> que sirve para delinear el borde de la tabla.
+                                                Dicho borde puede ser de grosores variables.
+
+                                                bgcolor es un atributo DEPRECADO, USAR *background-color:* EN LA HOJA DE CSS EN SU LUGAR
+                                                que sirve para establecer el color de fondo, de la tabla en este caso.
+                                                En el caso de la tabla parece ser que el color que cambia es el del espacio entre las
+                                                celdas de la tabla ya que las celdas mantienen el color que les fue establecido mas abajo-->
+
+    <caption> Guía de Ejercicios HTML <!--<h3>Guía de Ejercicios HTML</h3>--></caption>
     <thead>
     <tr>
         <td>N#</td>
