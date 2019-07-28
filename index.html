@@ -8,25 +8,31 @@
 
         table {
             background-color: #2daf1f;
-            border-collapse: separate;
+            border-spacing: 0;              /*Afecta el espacio entre las celdas de la tabla, si la propiedad border-collapse
+                                              ya ha sido establecida entonces esta propiedad (border-spacing) no se toma en
+                                              cuenta (REVISAR, NO ESTOY SEGURO)
+                                              border-spacing : 0; no es lo mismo a border-collapse: collapse*/
+            /*border-collapse: separate;*/  /*afecta si los bordes de cada celda tienen separacion o se colapsan unos sobre
+                                          otros. Los dos valores posibles de esta propiedad son "separate" o "collapse"*/
             /*border: solid black;*/
-
         }
 
-        .impar {                        /*Despues de renegar mucho con los table tr:nth-child(odd) para intentar darle
+        .impar td{                        /*Despues de renegar mucho con los table tr:nth-child(odd) para intentar darle
                                           el formato de borde que yo queria a las filas impares, y que no funcione, termine
-                                          recurriendo a usar clases en todas las celdas que me interesan y dandole formato
-                                          a la clase en si.
+                                          recurriendo a usar clases en todas las tr, y como solo queria modificar los td,
+                                          al llamar a la clase para modificarla, agrego el tag td para modificar especificamente
+                                          las celdas de contenido
 
                                           NO ESTOY SEGURO SI ES CORRECTO, pero funciona, preguntarle a alguien que sepa*/
             border: dashed red 3px;
             padding: 10px;
         }
 
-        .par {                        /*Despues de renegar mucho con los table tr:nth-child(even) para intentar darle
+        .par td{                        /*Despues de renegar mucho con los table tr:nth-child(even) para intentar darle
                                           el formato de borde que yo queria a las filas impares, y que no funcione, termine
-                                          recurriendo a usar clases en todas las celdas que me interesan y dandole formato
-                                          a la clase en si.
+                                          recurriendo a usar clases en todas las tr, y como solo queria modificar los td,
+                                          al llamar a la clase para modificarla, agrego el tag td para modificar especificamente
+                                          las celdas de contenido
 
                                           NO ESTOY SEGURO SI ES CORRECTO, pero funciona, preguntarle a alguien que sepa*/
             border: dotted blue 3px;
@@ -80,42 +86,42 @@
     </tr>
     </thead>
     <tbody>
-    <tr >
+    <tr class="impar">
         <th>1</th>
-        <td class="impar">ej_noticia</td>
-        <td class="impar">Etiquetas Semánticas: header, section y footer
+        <td>ej_noticia</td>
+        <td>Etiquetas Semánticas: header, section y footer
             <br> Títulos, estilos: Negrita, italica y subrayado <br> imagenes </td >
     </tr>
-    <tr>
+    <tr class="par">
         <th>2</th>
-        <td class="par">ej_listas</td>
-        <td class="par">Listas Ordenadas y No Ordenadas <br> imagenes</td>
+        <td >ej_listas</td>
+        <td >Listas Ordenadas y No Ordenadas <br> imagenes</td>
     </tr>
-    <tr>
+    <tr class="impar">
         <th>3</th>
-        <td class="impar">ej_noticia</td>
-        <td class="impar">Etiquetas Semánticas: Nav <br> link a otra página (receta)</td>
+        <td>ej_noticia</td>
+        <td>Etiquetas Semánticas: Nav <br> link a otra página (receta)</td>
     </tr>
-    <tr>
+    <tr class="par">
         <th>4</th>
-        <td class="par">ej_tablas</td>
-        <td class="par">table, tr, td, tbody, thead, tfooter, colspan, rowspan</td>
+        <td >ej_tablas</td>
+        <td >table, tr, td, tbody, thead, tfooter, colspan, rowspan</td>
     </tr>
-    <tr>
+    <tr class="impar">
         <th>5</th>
-        <td class="impar">ej_tablas</td>
-        <td class="impar">Comentarios en HTML</td>
+        <td>ej_tablas</td>
+        <td>Comentarios en HTML</td>
     </tr>
-    <tr>
+    <tr class="par">
         <th>6</th>
-        <td class="par">ej_formulario</td>
-        <td class="par">form, input type(radio button, email, password), select y option, button</td>
+        <td >ej_formulario</td>
+        <td >form, input type(radio button, email, password), select y option, button</td>
     </tr>
 
-    <tr>
+    <tr class="impar">
         <th>7</th>
-        <td class="impar">ej_animales</td>
-        <td class="impar">audio, video <br>
+        <td>ej_animales</td>
+        <td>audio, video <br>
         video de youtube</td>
     </tr>
     </tbody>
@@ -131,17 +137,17 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
+    <tr class="impar">
         <th>1</th>
         <td>ej_formulario</td>
         <td>Label</td>
     </tr>
-    <tr>
+    <tr class="par">
         <th>2</th>
-        <td>ej_listas y ej_noticia</td>
-        <td>Atributo ALT para las imágenes</td>
+        <td >ej_listas y ej_noticia</td>
+        <td >Atributo ALT para las imágenes</td>
     </tr>
-    <tr>
+    <tr class="impar">
         <th>3</th>
         <td>ej_tablas</td>
         <td>Etiqueta caption</td>
