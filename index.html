@@ -8,7 +8,7 @@
 
         table {
             background-color: #2daf1f;
-            border-spacing: 0;              /*Afecta el espacio entre las celdas de la tabla, si la propiedad border-collapse
+            border-spacing: 0.1em;              /*Afecta el espacio entre las celdas de la tabla, si la propiedad border-collapse
                                               ya ha sido establecida entonces esta propiedad (border-spacing) no se toma en
                                               cuenta (REVISAR, NO ESTOY SEGURO)
                                               border-spacing : 0; no es lo mismo a border-collapse: collapse*/
@@ -17,27 +17,28 @@
             /*border: solid black;*/
         }
 
-        .impar td{                        /*Despues de renegar mucho con los table tr:nth-child(odd) para intentar darle
+        /*.impar td{                        /*Despues de renegar mucho con los table tr:nth-child(odd) para intentar darle
                                           el formato de borde que yo queria a las filas impares, y que no funcione, termine
                                           recurriendo a usar clases en todas las tr, y como solo queria modificar los td,
                                           al llamar a la clase para modificarla, agrego el tag td para modificar especificamente
                                           las celdas de contenido
 
-                                          NO ESTOY SEGURO SI ES CORRECTO, pero funciona, preguntarle a alguien que sepa*/
+                                          es aceptable y correcto, pero una forma mas prolija y eficiente es con nth-child
+                                          de la manera que esta descrito en el comentario de la linea 52
             border: dashed red 3px;
             padding: 10px;
         }
 
-        .par td{                        /*Despues de renegar mucho con los table tr:nth-child(even) para intentar darle
+        .par td{                          /*Despues de renegar mucho con los table tr:nth-child(even) para intentar darle
                                           el formato de borde que yo queria a las filas impares, y que no funcione, termine
                                           recurriendo a usar clases en todas las tr, y como solo queria modificar los td,
                                           al llamar a la clase para modificarla, agrego el tag td para modificar especificamente
                                           las celdas de contenido
 
-                                          NO ESTOY SEGURO SI ES CORRECTO, pero funciona, preguntarle a alguien que sepa*/
+                                          idem al parrafo de comentario de arriba
             border: dotted blue 3px;
             padding: 10px;
-        }
+        }*/
 
         table th {
             background-color: #b4c5ff;
@@ -46,19 +47,24 @@
             padding: 10px ;
         }
 
-        /*table td:nth-child(odd) {
-            border: dashed orange 3px;
-            padding: 10px ;
-        }*/
-
-        /*table td:nth-child(even) {
-            border: dotted yellow 3px;
-            padding: 10px ;
-        }*/
-
         table tr:nth-child(odd) {background-color: #faf5ff;}
 
+        /*La mejor forma de lograr lo que pretendia usando nth-child es usando exactamente la misma linea que
+        uso la profe para ponerle color de fondo a toda la fila, pero en otra linea de codigo, como una nueva
+        llamada a la pseudoclase, y esta vez especificando el selector al que quiero meterle modificaciones
+        en este caso el selector resulto ser td*/
+
+        table tr:nth-child(odd) td {
+            border: dashed green 3px;
+            padding: 10px;
+        }
+
         table tr:nth-child(even) {background-color: #dbeeff;}
+
+        table tr:nth-child(even) td{
+            border: dotted goldenrod 3px;
+            padding: 10px;
+        }
 
         /*caption {background: #af171d}   /*este tag es el que le otorga titulos a las tablas, forma un
                                          cuadro para la tabla y por defecto tiene fondo blanco y sin bordes*/
